@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Store{% endblock %}</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+
+    <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+    <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+    {% load staticfiles %}
+
+    <!-- Bootstrap CSS File -->
+    <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/animate-css/animate.min.css' %}" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="{% static 'css/store_style.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+
+</head>
+<body>
+
+<!--==========================
+Header Section
+============================-->
+<header id="header">
+    <div class="container">
+
+        <div id="logo" class="pull-left">
+            <a href="{% url 'home' %}"><img class="nav-logo" src="{% static 'img/logo.png' %}" title="Logo"></img></a>
+            <!-- Uncomment below if you prefer to use a text image -->
+            <!--<h1><a href="#hero">Header 1</a></h1>-->
+        </div>
+        <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          {% if user.is_authenticated %}
+            <li><a href="{% url 'games' %}">GAMES</a></li>
+            <li><a href="{% url 'store' %}">BUY TOKENS</a></li>
+          <li><a href="{% url 'account'%}">ACCOUNT</a></li>
+            <li><a href="{% url 'logout' %}">LOGOUT</a></li>
+            <li><a class="nav-token" href="{% url 'store' %}"><img style="margin-top: -4%;" src="{% static 'img/smallcoin.png' %}" title="coin"> {{ request.user.profile.tokens }}</img></a></li>
+
+          {% else %}
+            <li><a href="{% url 'games' %}">GAMES</a></li>
+            <li><a href="{% url 'login' %}">LOGIN</a></li>
+            <li><a href="{% url 'signup' %}">SIGN UP NOW!</a></li>
+          {% endif %}
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+</header><!-- #header -->
+
+<section id="hero">
+    <div class="hero-container">
+        <div class="wow fadeIn">
+            <div class="row">
+                <div class="box">
+                    <img class="coin" src="{% static 'img/coin.png' %}" title="Coin"></img>
+                    <h2 style="color: #808080">10 Tokens</h2>
+                    <p>&#36;4.99</p>
+                    {{ single.render }}
+                </div>
+                <div class="box">
+                    <img class="coin" src="{% static 'img/coin.png' %}" title="Coin"></img>
+                    <h2 style="color: #808080">25 Tokens</h2>
+                    <p>&#36;9.99</p>
+                    {{ five.render }}
+                </div>
+                <div class="box">
+                    <img class="coin" src="{% static 'img/coin.png' %}" title="Coin"></img>
+                    <h2 style="color: #808080">50 Tokens</h2>
+                    <p>&#36;16.99</p>
+                    {{ ten.render }}
+                </div>
+                <div class="box">
+                    <img class="coin" src="{% static 'img/coin.png' %}" title="Coin"></img>
+                    <h2 style="color: #808080">100 Tokens</h2>
+                    <p>&#36;29.99</p>
+                    {{ tf.render }}
+                </div>
+                <div class="box">
+                    <img class="coin" src="{% static 'img/coin.png' %}" title="Coin"></img>
+                    <h2 style="color: #808080">250 Tokens</h2>
+                    <p>&#36;49.99</p>
+                    {{ fifty.render }}
+                </div>
+                <div class="box">
+                    <img class="coin" src="{% static 'img/coin.png' %}" title="Coin"></img>
+                    <h2 style="color: #808080">500 Tokens</h2>
+                    <p>&#36;74.99</p>
+                    {{ hund.render }}
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<div id="footer-nav">
+    <ul id="nav">
+      <li><a href="{% url 'contact' %}">CONTACT</a></li>
+      <li><a href="{% url 'tutorial' %}">HOW TO PLAY</a></li>
+      <li><a href="{% url 'about' %}">ABOUT</a></li>
+      <li><a href="">TERMS</a></li>
+      <a href="https://www.facebook.com/Cash-Clicc-499860983687374/" class="icon fa fa-facebook"></a>
+      <a href="https://twitter.com/CashClicc" class="icon fa fa-twitter"></a>
+    </ul>
+  </div>
+
+
+
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<!-- Required JavaScript Libraries -->
+<script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'lib/superfish/hoverIntent.js' %}"></script>
+<script src="{% static 'lib/superfish/superfish.min.js' %}"></script>
+<script src="{% static 'lib/morphext/morphext.min.js' %}"></script>
+<script src="{% static 'lib/wow/wow.min.js' %}"></script>
+<script src="{% static 'lib/stickyjs/sticky.js' %}"></script>
+<script src="{% static 'lib/easing/easing.js' %}"></script>
+
+<!-- Template Specisifc Custom Javascript File -->
+<script src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>

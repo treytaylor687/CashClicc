@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Contact{% endblock %}</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+
+    <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+    <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+    {% load staticfiles %}
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Carrois+Gothic" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/animate-css/animate.min.css' %}" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="{% static 'css/login_style.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+
+</head>
+
+<body style="margin: 0 auto;">
+
+<!--==========================
+Header Section
+============================-->
+
+<a href="{% url 'home' %}"><img class="nav-logo" src="{% static 'img/logo.png' %}" title="Logo"></img></a>
+
+<div class="login_box">
+    <h1>SEND US A MESSAGE</h1>
+    <div class="login_container">
+        <form method="post">
+            {% csrf_token %}
+            {% for field in form %}
+            <h2>
+                {{ field.label_tag }}<br>
+                {{ field }}<br>
+                <!--{% if field.help_text %}
+                <small style="color: grey">{{ field.help_text }}</small>
+                {% endif %}-->
+                {% for error in field.errors %}
+                <p style="color: red">{{ error }}</p>
+                {% endfor %}
+            </h2>
+            {% endfor %}
+            <button class="login_button" type="submit">SEND MESSAGE</button>
+        </form>
+    </div>
+    {% if success %}
+    <h2 style="color: #58b968; margin-top: 2%;">{{ success }}</h2>
+    {% endif %}
+</div>
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<!-- Required JavaScript Libraries -->
+<script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'lib/superfish/hoverIntent.js' %}"></script>
+<script src="{% static 'lib/superfish/superfish.min.js' %}"></script>
+<script src="{% static 'lib/morphext/morphext.min.js' %}"></script>
+<script src="{% static 'lib/wow/wow.min.js' %}"></script>
+<script src="{% static 'lib/stickyjs/sticky.js' %}"></script>
+<script src="{% static 'lib/easing/easing.js' %}"></script>
+
+<!-- Template Specisifc Custom Javascript File -->
+<script src="{% static 'js/custom.js' %}"></script>
+
+
+</body>
+</html>

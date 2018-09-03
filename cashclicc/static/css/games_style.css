@@ -1,0 +1,1345 @@
+@font-face {
+    font-family: 'CocoGothic';
+    src: url('fonts/CocoGothic.eot'); /* IE9 Compat Modes */
+    src: url('fonts/CocoGothic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/CocoGothic.woff') format('woff'), /* Modern Browsers */
+         url('fonts/CocoGothic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/CocoGothic.svg#CocoGothic') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'CocoGothic';
+    src: url('fonts/CocoGothic-Bold.eot'); /* IE9 Compat Modes */
+    src: url('fonts/CocoGothic-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/CocoGothic-Bold.woff') format('woff'), /* Modern Browsers */
+         url('fonts/CocoGothic-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/CocoGothic-Bold.svg#CocoGothic-Bold') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+  background: #fff;
+  text-align: center;
+  color: #666666;
+  margin-bottom: 150px;
+  clear: both;
+  font-family: CocoGothic;
+}
+
+a {
+  color: #03C4EB;
+  transition: 0.5s;
+}
+
+a:hover, a:active, a:focus {
+  color: #03c5ec;
+  outline: none;
+  text-decoration: none;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: CocoGothic;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+/* Prelaoder */
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  display: none;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  padding: 6px 12px 9px 12px;
+  font-size: 16px;
+  border-radius: 2px;
+  right: 15px;
+  bottom: 15px;
+  transition: background 0.5s;
+}
+
+@media (max-width: 992px) {
+  .back-to-top {
+    bottom: 15px;
+  }
+}
+
+.back-to-top:focus {
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  outline: none;
+}
+
+.back-to-top:hover {
+  background: #58b968;
+  color: #fff;
+}
+
+#submit-message {
+  color: green;
+}
+/*--------------------------------------------------------------
+# Welcome
+--------------------------------------------------------------*/
+#hero {
+  display: table;
+  width: 100%;
+  background-color: white;
+  background-size: cover;
+}
+
+#hero .hero-logo img {
+  width: 75%;
+  height: 75%;
+  max-width: 100%;
+}
+
+#hero .hero-container {
+  background: white;
+  display: table-cell;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+
+#hero .hero-text {
+    padding-top: 3%;
+    line-height: 50%;
+    float: none;
+    width: 66%;
+    margin: 0 auto;
+
+ }
+
+.join-hero {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 1% 3%;
+  border: 5px solid #58b968;
+  border-radius: 10px;
+  background: #58b968;
+  font: normal normal bold 20px CocoGothic;
+  color: #ffffff;
+  text-decoration: none;
+
+}
+.join-hero:hover, .join-hero:focus {
+  color: #58b968;
+  background-color: white;
+}
+
+
+
+#hero .rotating > .animated {
+  display: inline-block;
+}
+
+#hero .actions a {
+  font-family: CocoGothic;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 2px;
+  transition: 0.5s;
+  margin: 10px;
+}
+
+#hero .btn-get-started {
+  background: #03C4EB;
+  border: 2px solid #03C4EB;
+  color: #fff;
+}
+
+#hero .btn-get-started:hover {
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#hero .btn-services {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#hero .btn-services:hover {
+  background: #03C4EB;
+  border: 2px solid #03C4EB;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  background: white;
+  padding: 20px 0;
+  height: 90px;
+  border-bottom: 2px solid lightgray;
+}
+
+#header #logo {
+  float: left;
+}
+
+#header #logo h1 {
+  font-size: 36px;
+  margin: 0;
+  padding: 6px 0;
+  line-height: 1;
+  font-family: CocoGothic;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#header #logo h1 a, #header #logo h1 a:hover {
+  color: #fff;
+}
+
+#header #logo img {
+  vertical-align: middle;
+  max-width: 150px;
+}
+
+@media (max-width: 992px) {
+  #header {
+    height: 80px;
+  }
+  #header #logo h1 {
+    font-size: 26px;
+  }
+  #header #logo img {
+    max-height: 40px;
+  }
+}
+
+.is-sticky #header {
+  background:white;
+}
+
+/*--------------------------------------------------------------
+# Account Box
+--------------------------------------------------------------*/
+
+.login_box {
+    margin-top: 25px;
+}
+
+@media (max-width: 992px) {
+  .login_box {
+    margin-top: 15px;
+  }
+}
+
+
+.login_container {
+    max-width: 500px;
+    width: 33%;
+    margin: 0 auto;
+    border: 5px solid #e4e4e4;
+    border-radius: 19px;
+    padding-top: 15px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+
+@media (max-width: 992px) {
+  .login_container {
+    width: 80%;
+  }
+}
+
+.edit-icon {
+    width: 6%;
+    float: right;
+    margin-right: 8px;
+}
+
+.login_container small {
+    width: 60%;
+}
+
+.login_container a {
+    font-family: CocoGothic;
+
+}
+
+.login_container input {
+    max-width: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #e4e4e4;
+    line-height: 30px;
+}
+
+.login_container input::placeholder {
+    font-weight: 400;
+    font-size: 1.2vw;
+    color: lightgray;
+    padding-left: 10px;
+    padding-bottom: 28px;
+
+}
+
+.login_box h1 {
+    font-family: CocoGothic;
+    font-weight: bold;
+    font-size: 25px;
+    color: #808080;
+}
+
+.login_box h2 {
+    font-family: CocoGothic;
+    font-weight: bold;
+    font-size: 23px;
+    color: #808080;
+    margin-left: 15px;
+}
+.login_box p {
+    font-family: CocoGothic;
+    font-weight: 400;
+    display: inline;
+    font-size: 20px;
+    color: #808080;
+}
+
+
+@media (max-width: 500px) {
+  .login_box h1 {
+    font-size: 12vw;
+  }
+}
+
+@media (max-width: 900px) {
+
+    .login_container input::placeholder {
+    font-size: 2vw;
+    }
+
+}
+
+.login_container label {
+    text-transform: uppercase;
+    font-weight: 400;
+    float: left;
+    margin-left: 3%;
+    margin-bottom: 5%;
+}
+
+@media (max-width: 300px) {
+    login_button {
+        font-size: 2vw;
+    }
+}
+
+.login_button {
+    transition: 0.5s;
+    font-family: CocoGothic;
+    vertical-align: center;
+    border: 3px solid #696969;
+    border-radius: 50px;
+    padding: 5px 35px;
+    margin: 5px;
+    background: #696969;
+    font-size: 20px;
+    color: white;
+}
+
+.login_button:hover {
+    background: white;
+    color: #696969;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Nav Menu Essentials */
+.nav-menu, .nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu ul {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+}
+
+.nav-menu li a {
+  font-size: 120%;
+}
+.nav-menu .hide-text {
+  color: white;
+}
+.nav-menu .hide-text:hover {
+  color: white;
+}
+
+
+.nav-menu li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu > li {
+  float: left;
+}
+
+.nav-menu li:hover > ul,
+.nav-menu li.sfHover > ul {
+  display: block;
+}
+
+.nav-menu ul ul {
+  top: 0;
+  left: 100%;
+}
+
+.nav-menu ul li {
+  min-width: 180px;
+}
+
+/* Nav Menu Arrows */
+.sf-arrows .sf-with-ul {
+  padding-right: 30px;
+}
+
+.sf-arrows .sf-with-ul:after {
+  content: "\f107";
+  position: absolute;
+  right: 15px;
+  font-family: CocoGothic;
+  font-style: normal;
+}
+
+.sf-arrows ul .sf-with-ul:after {
+  content: "\f105";
+}
+
+/* Nav Menu Container */
+#nav-menu-container {
+  float: right;
+  margin: 5px 0;
+  background: white;
+}
+
+@media (max-width: 992px) {
+  #nav-menu-container {
+    display: none;
+    background: green;
+  }
+}
+
+/* Nav Meu Styling */
+.nav-menu a {
+  padding: 10px 15px;
+  text-decoration: none;
+  display: inline-block;
+  color: lightgray;
+  font-family: CocoGothic;
+  font-weight: 400;
+  font-size: 14px;
+  outline: none;
+}
+
+.nav-menu a:hover, .nav-menu li:hover > a, .nav-menu .menu-active > a {
+  color: black;
+}
+
+.nav-menu ul {
+  margin: 4px 0 0 15px;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.nav-menu ul li {
+  background: #fff;
+  border-top: 1px solid #f4f4f4;
+}
+
+.nav-menu ul li:first-child {
+  border-top: 0;
+}
+
+.nav-menu ul li:hover {
+  background: #f6f6f6;
+}
+
+.nav-menu ul li a {
+  color: white;
+}
+
+.nav-menu ul ul {
+  margin: 0;
+}
+
+.nav-token {
+    margin-left: 3%;
+}
+
+/* Mobile Nav Toggle */
+#mobile-nav-toggle {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  margin: 20px 20px 0 0;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  display: none;
+  transition: all 0.4s;
+  outline: none;
+}
+
+#mobile-nav-toggle i {
+  color: lightgray;
+}
+
+@media (max-width: 992px) {
+  #mobile-nav-toggle {
+    display: inline;
+  }
+}
+
+/* Mobile Nav Styling */
+#mobile-nav {
+  position: fixed;
+  top: 0;
+  padding-top: 18px;
+  bottom: 0;
+  z-index: 998;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  left: -260px;
+  width: 260px;
+  overflow-y: auto;
+  transition: 0.4s;
+}
+
+#mobile-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#mobile-nav ul li {
+  position: relative;
+}
+
+#mobile-nav ul li a {
+  color: #fff;
+  font-size: 16px;
+  overflow: hidden;
+  padding: 10px 22px 10px 15px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  outline: none;
+}
+
+#mobile-nav ul li a:hover {
+  color: #fff;
+}
+
+#mobile-nav ul li li {
+  padding-left: 30px;
+}
+
+#mobile-nav ul .menu-has-children i {
+  position: absolute;
+  right: 0;
+  z-index: 99;
+  padding: 15px;
+  cursor: pointer;
+  color: #fff;
+}
+
+#mobile-nav ul .menu-has-children i.fa-chevron-up {
+  color: white;
+}
+
+#mobile-nav ul .menu-item-active {
+  color: #03C4EB;
+}
+
+#mobile-body-overly {
+  width: 100%;
+  height: 100%;
+  z-index: 997;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+.payout {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px 7px 5px 7px;
+    border: 3px solid #808080;
+    border-radius: 8px;
+    background: #ffffff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff));
+    background: -moz-linear-gradient(top, #ffffff, #ffffff);
+    background: linear-gradient(to bottom, #ffffff, #ffffff);
+    font: normal normal bold 15px CocoGothic;
+    color: #808080;
+    text-decoration: none;
+}
+
+
+.payout:hover, .payout:focus {
+    background: #808080;
+    color: white;
+    text-decoration: none;
+}
+
+/* Mobile Nav body classes */
+body.mobile-nav-active {
+  overflow: hidden;
+}
+
+body.mobile-nav-active #mobile-nav {
+  left: 0;
+}
+
+body.mobile-nav-active #mobile-nav-toggle {
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Sections
+--------------------------------------------------------------*/
+/* Sections Common
+--------------------------------*/
+.section-title {
+  font-size: 32px;
+  color: #111;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+}
+
+.section-description {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title-divider {
+  width: 50px;
+  height: 3px;
+  background: green;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+/* Get Started Section
+--------------------------------*/
+#about {
+  background: #f7f7f7;
+  padding: 80px 0;
+}
+
+
+#about .about-content {
+  background: #fff;
+}
+
+#about .about-title {
+  color: #333;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+#about .about-text {
+  line-height: 26px;
+}
+
+#about .about-text:last-child {
+  margin-bottom: 0;
+}
+
+/* Services Section
+--------------------------------*/
+#services {
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+  background-size: cover;
+  padding: 80px 0 60px 0;
+}
+
+#services .service-item {
+  margin-bottom: 20px;
+}
+
+#services .service-icon {
+  float: left;
+  background: #03C4EB;
+  padding: 16px;
+  border-radius: 50%;
+  transition: 0.5s;
+  border: 1px solid #03C4EB;
+}
+
+#services .service-icon i {
+  color: #fff;
+  font-size: 24px;
+}
+
+#services .service-item:hover .service-icon {
+  background: #fff;
+}
+
+#services .service-item:hover .service-icon i {
+  color: #03C4EB;
+}
+
+#services .service-title {
+  margin-left: 80px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+#services .service-title a {
+  color: #111;
+}
+
+#services .service-description {
+  margin-left: 80px;
+  line-height: 24px;
+}
+
+/* Subscribe Section
+--------------------------------*/
+#subscribe {
+  background: #d3d3d3;
+  background-size: cover;
+  padding: 80px 0;
+}
+
+#subscribe .subscribe-title {
+  color: black;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+#subscribe .subscribe-text {
+  color: black;
+}
+
+#subscribe .subscribe-btn-container {
+  text-align: center;
+  padding-top: 20px;
+}
+
+#subscribe .subscribe-btn {
+  font-family: CocoGothic;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 2px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid black;
+  color: black;
+}
+
+#subscribe .subscribe-btn:hover {
+  background: #808080;
+  border: 2px solid #808080;
+}
+
+#submit-message {
+  color: green;
+}
+/* Portfolio Section
+--------------------------------*/
+#portfolio {
+  background: #fff;
+  padding: 80px 0;
+}
+
+#portfolio .portfolio-item {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 260px;
+  width: 100%;
+  display: table;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+#portfolio .portfolio-item .details {
+  height: 260px;
+  background: #fff;
+  display: table-cell;
+  vertical-align: middle;
+  opacity: 0;
+  transition: 0.3s;
+  text-align: center;
+}
+
+#portfolio .portfolio-item .details h4 {
+  font-size: 16px;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: translate3d(0, -15px, 0);
+  transform: translate3d(0, -15px, 0);
+  font-weight: 700;
+  color: #333333;
+}
+
+#portfolio .portfolio-item .details span {
+  display: block;
+  color: #666666;
+  font-size: 13px;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: translate3d(0, 15px, 0);
+  transform: translate3d(0, 15px, 0);
+}
+
+#portfolio .portfolio-item:hover .details {
+  opacity: 0.8;
+}
+
+#portfolio .portfolio-item:hover .details h4 {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+#portfolio .portfolio-item:hover .details span {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* Testimonials Section
+--------------------------------*/
+#testimonials {
+  background: #f6f6f6;
+  padding: 80px 0;
+}
+
+#testimonials .profile {
+  text-align: center;
+}
+
+#testimonials .profile .pic {
+  border-radius: 50%;
+  border: 6px solid #fff;
+  margin-bottom: 15px;
+  overflow: hidden;
+  height: 260px;
+  width: 260px;
+}
+
+#testimonials .profile .pic img {
+  max-width: 100%;
+}
+
+#testimonials .profile h4 {
+  font-weight: 700;
+  color: #03C4EB;
+  margin-bottom: 5px;
+}
+
+#testimonials .profile span {
+  color: #333333;
+}
+
+#testimonials .quote {
+  position: relative;
+  background: #fff;
+  padding: 60px;
+  margin-top: 40px;
+  font-size: 16px;
+  font-style: italic;
+  border-radius: 5px;
+}
+
+#testimonials .quote b {
+  display: inline-block;
+  font-size: 22px;
+  left: -9px;
+  position: relative;
+  top: -8px;
+}
+
+#testimonials .quote small {
+  display: inline-block;
+  right: -9px;
+  position: relative;
+  top: 4px;
+}
+
+/* Team Section
+--------------------------------*/
+#team {
+  background: #fff;
+  padding: 80px 0 60px 0;
+}
+
+#team .member {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#team .member .pic {
+  margin-bottom: 15px;
+  overflow: hidden;
+  height: 260px;
+}
+
+#team .member .pic img {
+  max-width: 100%;
+}
+
+#team .member h4 {
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+#team .member span {
+  font-style: italic;
+  display: block;
+  font-size: 13px;
+}
+
+#team .member .social {
+  margin-top: 15px;
+}
+
+#team .member .social a {
+  color: #b3b3b3;
+}
+
+#team .member .social a:hover {
+  color: #03C4EB;
+}
+
+#team .member .social i {
+  font-size: 18px;
+  margin: 0 2px;
+}
+
+/* Contact Section
+--------------------------------*/
+#contact {
+  background: #f7f7f7;
+  padding: 80px 0;
+}
+
+#contact .info {
+  color: #333333;
+}
+
+#contact .info i {
+  font-size: 32px;
+  color: green;
+  float: left;
+}
+
+#contact .info p {
+  padding: 0 0 10px 50px;
+  line-height: 24px;
+}
+
+#contact .form #sendmessage {
+  color: #03C4EB;
+  border: 1px solid #03C4EB;
+  display: none;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#contact .form #errormessage {
+  color: red;
+  display: none;
+  border: 1px solid red;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#contact .form #sendmessage.show, #contact .form #errormessage.show, #contact .form .show {
+  display: block;
+}
+
+#contact .form .validation {
+  color: red;
+  display: none;
+  margin: 0 0 20px;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+#contact .form input, #contact .form textarea {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+#contact .form button[type="submit"] {
+  background: green;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+}
+
+#contact .form button[type="submit"]:hover {
+  background: #25d8fc;
+}
+
+.box {
+    text-align: center;
+    vertical-align: middle;
+    width: 20%;
+    float: left;
+    border: 10px solid #e4e4e4;
+    margin-left: 4%;
+    margin-top: 4%;
+    border-radius: 19px;
+    background: #ffffff;
+    -webkit-box-shadow: #a8a8a8 0px 0px 20px 1px;
+    -moz-box-shadow: #a8a8a8 0px 0px 20px 1px;
+    box-shadow: #a8a8a8 0px 0px 40px 1px;
+    font-family: CocoGothic;
+    color: #ffffff;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.box:hover {
+    -webkit-box-shadow: #8d8d8d 0px 0px 20px 1px;
+    -moz-box-shadow: #8d8d8d 0px 0px 20px 1px;
+    box-shadow: #8d8d8d 0px 0px 40px 1px;
+}
+
+
+#hero p {
+    font: normal normal bold 2vw CocoGothic;
+    color: #808080;
+    margin-bottom: 3%;
+}
+
+#hero h1 {
+  font: normal normal bold 6vw CocoGothic;
+  text-transform: uppercase;
+  margin-top: 5%;
+  color: #58b968;
+}
+
+#hero h2 {
+  font: normal normal bold 2.5vw CocoGothic;
+  text-transform: uppercase;
+  color: #58b968;
+}
+
+.icon {
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    width: auto !important;
+    margin-left: .5em
+}
+
+.fa-facebook:hover {
+    color: #3B5998 !important;
+}
+
+.fa-twitter:hover {
+    color: #55ACEE !important;
+}
+
+
+#hero .ending-soon {
+  color: orange
+}
+#hero .ending {
+  color: red;
+}
+
+.clicc {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 3% 10% 1% 10%;
+    border: 3px solid #58b968;
+    border-radius: 8px;
+    background: #ffffff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff));
+    background: -moz-linear-gradient(top, #ffffff, #ffffff);
+    background: linear-gradient(to bottom, #ffffff, #ffffff);
+    font: normal normal bold 2vw CocoGothic;
+    color: #58b968;
+    text-decoration: none;
+    margin-bottom: 3%;
+}
+.clicc:hover, .clicc:focus {
+    border: 3px solid #58b968;
+    background: #58b968;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.buy {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 1% 10% 1% 10%;
+    border: .25vw solid #b29633;
+    border-radius: 8px;
+    background: #ffd849;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff));
+    background: -moz-linear-gradient(top, #ffffff, #ffffff);
+    background: linear-gradient(to bottom, #ffffff, #ffffff);
+    font: normal normal bold 2vw CocoGothic;
+    color: #b29633;
+    text-decoration: none;
+    margin-top: -5%;
+    margin-bottom: 3%;
+}
+.buy:hover, .buy:focus {
+    border: .25vw solid #b29633;
+    background: #b29633;
+    color: #ffd949;
+    text-decoration: none;
+}
+
+.coin {
+    max-width: 100%;
+    margin-top: 3%;
+}
+
+.tokens {
+  font-family: CocoGothic;
+  font-weight: 700;
+  display: inherit;
+  color: #808080;
+  font-size: 18px;
+}
+
+.nav-token {
+    margin-left: 3%;
+}
+
+.tokens:hover {
+  color: #808080;
+}
+
+.tutorial-game {
+  display: inline-block;
+  border: 2px solid lightgray !important;
+  border-radius: 6px !important;
+  text-decoration: none !important;
+  color: lightgray !important;
+  padding: 10px 20px 10px 20px !important;
+  font-weight: 700;
+  position: fixed;
+  bottom: 6%;
+  left: 43%
+}
+
+.tutorial-game:hover {
+  background: lightgray;
+  color: white !important;
+}
+
+@media all and (max-width: 762px) {
+    left: 30%;
+}
+
+#footer-nav {
+  position: fixed;
+  bottom: 0;
+  background: white;
+  padding: 20px 0;
+  min-height: 90px;
+  width: 100%;
+  clear: both;
+  opacity: 0;
+}
+#footer-nav a {
+  display: inline-block;
+  color: lightgray;
+  text-decoration: none;
+  padding: 0 .5em 0 .5em;
+}
+#footer-nav a:hover {
+  color: black;
+}
+
+@media (max-width: 425px) {
+    #footer-nav a {
+        line-height: 190% !important;
+    }
+}
+
+#nav {
+    padding-left: 0px;
+    margin-top: 15px;
+    vertical-align: middle;
+}
+
+#nav li {
+  list-style-type:none;
+  display: inline;
+  margin: 0 auto;
+  white-space:nowrap
+}
+
+
+.cashed-out, .cashed-out:hover {
+    display: inline-block;
+    text-align: center;
+    margin-top: -5%;
+    vertical-align: middle;
+    padding: 2% 10% 1% 10%;
+    border: .25vw solid #6c6c6c;
+    border-radius: 8px;
+    background: #6c6c6c;
+    font: normal normal bold 2vw CocoGothic;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+@media all and (max-width: 1024px) {
+  .box {
+    width: 44%;
+  }
+  #hero p {
+    margin-bottom: 10px;
+    font-size: 4vw;
+  }
+  #hero h2 {
+    margin-bottom: -2px;
+    font-size: 5vw;
+  }
+  #hero h1 {
+    margin-bottom: -10px;
+    font-size: 10vw;
+  }
+
+  .clicc {
+    border-radius: 6px;
+    font-size: 20px;
+  }
+
+  .cashed-out {
+    padding-top: 2%;
+  }
+}
+
+@media all and (max-width: 425px) {
+  .box {
+    width: 60%;
+    float: none;
+    margin-left: 20%;
+  }
+  #hero p {
+    margin-top: 8%;
+    font-size: 6vw;
+  }
+  #hero h2 {
+    font-size: 8vw;
+    margin-bottom: -15px;
+  }
+  #hero h1 {
+    font-size: 14vw;
+    margin-bottom: 0;
+  }
+
+  .clicc {
+    font-size: 5vw;
+    margin-top: 5px;
+    border-radius: 6px;
+  }
+
+  .cashed-out {
+    padding-top: 2%;
+  }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: lightgray;
+  padding: 30px 0;
+  color: #fff;
+  height: auto;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: justify;
+}
+
+#footer ul {
+  list-style: none;
+  margin: 0 2px;
+  padding: 0;
+  display: flex;
+}
+
+@media (max-width: 992px) {
+  #footer ul {
+    display: block;
+  }
+}
+
+#footer .copyright {
+  text-align: center;
+}
+
+#footer .credits {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
+}
+
+#footer .credits a {
+  color: green;
+}
+
+#form {
+    border: 1px solid #e4e4e4;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    text-decoration: none;
+    background: #e4e4e4;
+}

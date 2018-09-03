@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}&#36;{{ game_object.amount }}{% endblock %}</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+
+    <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+    <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+    {% load staticfiles %}
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Carrois+Gothic" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link href="{% static 'css/game_page_style.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{% static 'lib/animate-css/animate.min.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+
+    <!-- Main Stylesheet File -->
+
+</head>
+
+<body>
+
+<header id="header">
+    <div class="container">
+
+        <div id="logo" class="pull-left">
+            <a href="{% url 'home' %}"><img class="nav-logo" src="{% static 'img/logo.png' %}" title="Logo"></img></a>
+            <!-- Uncomment below if you prefer to use a text image -->
+            <!--<h1><a href="#hero">Header 1</a></h1>-->
+        </div>
+        <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          {% if user.is_authenticated %}
+            <li><a href="{% url 'games' %}">GAMES</a></li>
+            <li><a href="{% url 'store' %}">BUY TOKENS</a></li>
+            <li><a href="{% url 'account'%}">ACCOUNT</a></li>
+            <li><a href="{% url 'logout' %}">LOGOUT</a></li>
+          {% else %}
+            <li><a href="{% url 'games' %}">GAMES</a></li>
+            <li><a href="{% url 'login' %}">LOGIN</a></li>
+            <li><a href="{% url 'signup' %}">SIGN UP NOW!</a></li>
+          {% endif %}
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+</header><!-- #header -->
+
+<!--==========================
+Header Section
+============================
+<div class="game_box">
+    <div class="game_container">
+        <h1>&#36;{{ game_object.amount }}</h1>
+        <h2>{{ game_object.start_time}}</h2>
+        <p>{{ game_object.current_top_user }}</p>
+        <form method="get">
+            <input type="submit" class="clicc" value="CLICC NOW" name="{{ game.pk }}"/>
+        </form>
+    </div>
+</div>-->
+
+<section id="hero">
+    <div class="hero-container">
+        <div class="wow fadeIn">
+            <div class="box">
+                <h1 id="cash">&#36;{{ game_object.amount }}</h1>
+                <h2 id="time">{{ game_object.start_time}}</h2>
+                <p id="name">{{ game_object.current_top_user }}</p>
+                <form id="clicc" method="get">
+                    <input type="submit" id="game_button" class="clicc" value="CLICC NOW" name="{{ game_object.pk }}"/>
+                </form>
+                <a class="buy" href="{% url 'store' %}">BUY TOKENS</a>
+                <br>
+                <a class="game-token" href="{% url 'store' %}"><img src="{% static 'img/smallcoin.png' %}" title="coin"> {{ request.user.profile.tokens }}</img></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<!-- Required JavaScript Libraries -->
+<script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'lib/superfish/hoverIntent.js' %}"></script>
+<script src="{% static 'lib/superfish/superfish.min.js' %}"></script>
+<script src="{% static 'lib/morphext/morphext.min.js' %}"></script>
+<script src="{% static 'lib/wow/wow.min.js' %}"></script>
+<script src="{% static 'lib/stickyjs/sticky.js' %}"></script>
+<script src="{% static 'lib/easing/easing.js' %}"></script>
+<script src="{% static 'js/time.js' %}"></script>
+
+<!-- Template Specific Custom Javascript File -->
+<script src="{% static 'js/custom.js' %}"></script>
+
+
+</body>
+</html>
