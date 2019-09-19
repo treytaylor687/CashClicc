@@ -125,27 +125,6 @@ def store(request):
 
 @login_required()
 def game_page(request, game_id):
-    '''
-    game_object = Game.objects.filter(id=game_id)[0]
-    context = {'game_object': game_object}
-    if request.GET.get(str(game_object.pk)) and request.user.profile.get_tokens() > 0:
-        if game_object.get_top_user() != request.user.username and game_object.status == 1:
-            #game_object.update_game(request.user.profile)
-            username = str(User.objects.filter(username=request.user.profile.user)[0])
-            game_object.current_top_user = username
-            time_d = game_object.end_time - game_object.current_time
-            if time_d.seconds < 10:
-                game_object.end_time += timedelta(seconds=(10 - time_d.seconds))
-            game_object.save()
-            if game_object.current_top_user == username:
-                request.user.profile.use_token()
-            return redirect('/games/' + str(game_object.pk) + '/')
-        return redirect('/games/' + str(game_object.pk) + '/')
-    elif request.user.profile.get_tokens() == 0:
-        return redirect('/store/')
-    else:
-        return render(request, 'game_page.html', context)
-    '''
     game_object = Game.objects.filter(id=game_id)[0]
     context = {'game_object': game_object}
     if request.GET.get(str(game_object.pk)):
